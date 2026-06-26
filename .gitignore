@@ -1,0 +1,17 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Uploads / generated reels (don't commit user media)
+uploads/
+static/reels/
+
+# OS / editor junk
+.DS_Store
+.vscode/
