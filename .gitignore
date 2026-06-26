@@ -10,6 +10,7 @@ env/
 
 # Uploads / generated reels (don't commit user media)
 uploads/
+user_uploads/
 static/reels/
 
 # OS / editor junk
