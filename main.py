@@ -19,16 +19,16 @@ def create():
         print(request.files.keys())
         rec_id=request.form.get("uuid")
         desc=request.form.get("text")
-        folder = os.path.join(app.config['UPLOAD_FOLDER'],rec_id)
-        os.makedirs(folder,exist_ok=True)
+        folder1 = os.path.join(app.config['UPLOAD_FOLDER'],rec_id)
+        os.makedirs(folder1,exist_ok=True)
 
         for file in request.files.values():
             filename = secure_filename(file.filename) 
             #Upload File
             if file and filename:
-                file.save(os.path.join(folder,filename))
+                file.save(os.path.join(folder1,filename))
          #Capture the description and save it to file
-        with open(os.path.join(folder, "desc.txt"),"w",encoding="utf-8") as f:
+        with open(os.path.join(folder1, "desc.txt"),"w",encoding="utf-8") as f:
                 f.write(desc)
 
     return render_template("create.html",myid=myid)
